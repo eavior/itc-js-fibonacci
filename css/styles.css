@@ -1,3 +1,8 @@
+body * {
+    position: absolute;
+}
+
+
 body {
     font-family: 'Open Sans', sans-serif;
     font-weight: 400;
@@ -16,13 +21,12 @@ body {
     margin-bottom: 5rem;
     /* width: 90rem; */
     max-width: 90rem;
-    height: 64rem;
+    min-height: 64rem;
     overflow: auto;
-
 }
 
 .display-5 {
-    position: absolute;
+
     width: 42rem;
     height: 5rem;
     left: 10.25rem;
@@ -31,7 +35,7 @@ body {
 }
 
 .display-2 {
-    position: absolute;
+
     width: 12rem;
     height: 4.5rem;
     left: 10.25rem;
@@ -41,7 +45,7 @@ body {
 }
 
 .text {
-    position: absolute;
+
     width: 11.8rem;
     height: 1.5rem;
     left: 10.6rem;
@@ -49,51 +53,60 @@ body {
 }
 
 .form-control {
-    position: absolute;
-    width: 5.5rem;
+  
+    width: 5.4rem;
     height: 2.375rem;
-    left: 22.75rem;
+    left: 21.75rem;
     top: 14.3rem;
 }
 
 #fButton {
-    position: absolute;
+  
     width: 2.44rem;
     height: 2.375rem;
-    left: 29.25rem;
+    left: 29rem;
     top: 14.3rem;
 }
 
 #outputNumber {
-    position: absolute;
+  
     width: 1.75rem;
     height: 1.5rem;
-    left: 32.8rem;
+    left: 31.8rem;
     top: 14.75rem;
     font-weight: bold;
     text-decoration-line: underline;
 }
 
 #serverError {
-    position: absolute;
+
     width: 400px;
     height: 1.5rem;
-    left: 32.8rem;
+    left: 31.8rem;
     top: 14.75rem;
     font-size: 1rem;
     color: #D9534F;
 }
 
-.form-check {
+#checkbox {
     position: absolute;
+
     width: 8.875rem;
     height: 1.5rem;
-    left: 10.6rem;
+}
+
+.form-check {
     top: 17.25rem;
+    left: 10.6rem;
+}
+
+.form-check-push-down {
+    top: 20rem;
+    left: 11.6rem;
 }
 
 .form-check-input {
-    position: absolute;
+  
     width: 0.875rem;
     height: 0.875rem;
     background: #FFFFFF;
@@ -104,35 +117,36 @@ body {
 }
 
 .form-check-label {
-    position: absolute;
+  
     width: 7.625rem;
     height: 1.5rem;
     font-size: 1rem;
 }
 
 .text-danger {
-    position: absolute;
+
     width: 11.25rem;
     height: 2rem;
-    left: 16.1rem;
+    left: 15.9rem;
     top: 17.2rem;
     padding: 0.2rem;
     background: #F2DEDE;
     border: 1px solid #EBCCCC;
     border-radius: 4px;
     font-size: 1rem;
+    font-weight: 400;
     color: #A94442;
 }
 
 
 .spinner1 {
-    position: absolute;
-    left: 32.5rem;
+
+    left: 31.5rem;
     top: 14.3rem;
 }
 
 .spinner2 {
-    position: absolute;
+
     left: 355px;
     top: 375px;
 }
@@ -144,7 +158,7 @@ body {
 }
 
 .dropdown {
-    position: absolute;
+
     width: 7.625rem;
     height: 2.375rem;
     left: 10.25rem;
@@ -175,7 +189,7 @@ body {
 }
 
 .results {
-    position: absolute;
+
     width: 68rem;
     height: 1.5rem;
     left: 10.25rem;
@@ -183,7 +197,7 @@ body {
 }
 
 ul#results {
-    position: absolute;
+
     width: 1088px;
     left: 10.25rem;
     top: 479px;
@@ -192,6 +206,7 @@ ul#results {
 }
 
 ul#results li {
+    position: static;
     text-decoration: none;
     font-size: 21px;
     line-height: 24px;
@@ -202,8 +217,47 @@ ul#results li {
     border-bottom: 1px solid black;
 }
 
-li mark {
+li strong {
+    position: static;
     padding: 0em;
     background: none;
     font-weight: 700;
+}
+
+.form-check {
+
+    left: 169px;
+top: 281px;
+}
+
+
+.form-check-input {
+
+width: 14px;
+height: 14px;
+
+
+background: #FFFFFF;
+border: 1px solid #CCCCCC;
+box-sizing: border-box;
+box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.1);
+border-radius: 2px;
+}
+
+.form-check-label {
+
+width: 222px;
+height: 24px;
+
+
+font-style: normal;
+font-weight: normal;
+font-size: 16px;
+line-height: 24px;
+/* identical to box height, or 150% */
+
+display: flex;
+align-items: flex-end;
+
+color: #373A3C;
 }
