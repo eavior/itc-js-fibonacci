@@ -6,8 +6,8 @@ body {
     font-family: 'Open Sans', sans-serif;
     font-weight: 400;
     font-style: normal;
-    font-size: 24px;
-    line-height: 24px;
+    font-size: 1.5rem;
+    line-height: 1.5rem;
     color: #373A3C;
     background-color: #F2F2F2
 }
@@ -72,7 +72,7 @@ body {
 }
 
 #serverError {
-    width: 400px;
+    width: 25rem;
     height: 1.5rem;
     font-size: 1rem;
     color: #D9534F;
@@ -135,8 +135,8 @@ body {
 }
 
 .spinner2 {
-    left: 355px;
-    top: 375px;
+    left: 22.2rem;
+    top: 23.4rem;
 }
 
 .spinner-border {
@@ -182,9 +182,9 @@ body {
 }
 
 ul#results {
-    width: 1088px;
+    width: 68rem;
     left: 10.6rem;
-    top: 479px;
+    top: 29.9rem;
     padding-left: 0rem;
     list-style-type: none;
 }
@@ -192,11 +192,11 @@ ul#results {
 ul#results li {
     position: static;
     text-decoration: none;
-    font-size: 21px;
-    line-height: 24px;
+    font-size: 1.313rem;
+    line-height: 1.5rem;
     color: black;
-    padding-top: 18px;
-    padding-bottom: 18px;
+    padding-top: 1.125rem;
+    padding-bottom: 1.125rem;
     border-bottom: 1px solid black;
 }
 

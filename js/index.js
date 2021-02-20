@@ -12,24 +12,28 @@ checkbox.addEventListener('change', e => {
   else server = false;
 });
 
-
 function getFibonacci() {
   cleanOutputs();
   let num = document.getElementById("inputNumber").value;
   if (server) getFibonacciFromServer(num);
   else {
-      let outputText = document.createElement("div");
-      outputText.innerHTML = getFibonacciLocally(num);
-      outputText.setAttribute("id", "outputNumber");
-      document.getElementById("result").appendChild(outputText);
-    }  
+    let outputText = document.createElement("div");
+    outputText.innerHTML = getFibonacciLocally(num);
+    outputText.setAttribute("id", "outputNumber");
+    document.getElementById("result").appendChild(outputText);
+  }
 }
-
 
 function cleanOutputs() {
   document.getElementById("inputNumber").classList.remove("is-invalid");
-  document.getElementById("alert").innerHTML = "";
-  document.getElementById("result").innerHTML = "";
+  let item = document.querySelector('#alert');
+  while (item.firstChild) {
+    item.removeChild(item.firstChild);
+  }
+  item = document.querySelector('#result');
+  while (item.firstChild) {
+    item.removeChild(item.firstChild);
+  }
   document.getElementById("checkbox").classList.add("form-check");
   document.getElementById("checkbox").classList.remove("form-check-push-down");
 }
@@ -38,7 +42,7 @@ function getFibonacciLocally(num) {
   if (num <= 1) {
     return num;
   }
-  return getFibonacciLocally(num-2) + getFibonacciLocally(num-1);
+  return getFibonacciLocally(num - 2) + getFibonacciLocally(num - 1);
 }
 
 async function getFibonacciFromServer(num) {
@@ -74,21 +78,25 @@ async function getFibonacciFromServer(num) {
       }
     })
   }
-
 }
 
 let sortChoices = document.getElementsByClassName('dropdown-item');
 let sortChoice = "";
 Array.from(sortChoices).forEach((element) => {
   element.addEventListener('click', (event) => {
-  sortChoice = event.target.innerText;
-  loadFibonacciResults(); 
+    sortChoice = event.target.innerText;
+    loadFibonacciResults();
   });
 });
 
 function loadFibonacciResults() {
-  document.getElementById("resultsSpinner").innerHTML = `<div class="spinner2 spinner-border p-absolute" role="status"><span class="sr-only">Loading...</span></div>`;
-  document.getElementById("results").innerHTML = '';
+  let spinner2 = document.createElement("div");
+  spinner2.className = "spinner2 spinner-border p-absolute";
+  document.getElementById("resultsSpinner").appendChild(spinner2);
+  item = document.querySelector('#results');
+  while (item.firstChild) {
+    item.removeChild(item.firstChild);
+  }
   fetch('http://localhost:5050/getFibonacciResults')
     .then(response => {
       response.json().then(data => {
@@ -97,7 +105,7 @@ function loadFibonacciResults() {
         switch (sortChoice) {
           case "Number Asc":
             sortedArray.sort(function (a, b) {
-             return a.number - b.number;
+              return a.number - b.number;
             });
             break;
           case "Number Desc":
@@ -107,14 +115,14 @@ function loadFibonacciResults() {
             break;
           case "Date Asc":
             sortedArray.sort(function (a, b) {
-              return b.createdDate - a.createdDate;
+              return a.createdDate - b.createdDate;
             });
             break;
           case "Date Desc":
             sortedArray.sort(function (a, b) {
               return b.createdDate - a.createdDate;
             });
-              break;
+            break;
           default:
             sortedArray.sort(function (a, b) {
               return b.createdDate - a.createdDate;
@@ -123,18 +131,12 @@ function loadFibonacciResults() {
         }
         for (let fResults of sortedArray) {
           let cDate = new Date(fResults.createdDate);
-          document.getElementById("results").innerHTML += `<li>The Fibonnaci of <strong>${fResults.number}</strong> is <strong>${fResults.result}</strong>. Calculated at: ${cDate.toString()}</li>`;
+          let fibonacciList = document.createElement("li");
+          fibonacciList.innerHTML = `The Fibonnaci of <strong>${fResults.number}</strong> is <strong>${fResults.result}</strong>. Calculated at: ${cDate.toString()}`;
+          document.getElementById("results").appendChild(fibonacciList);
         }
-        document.getElementById("resultsSpinner").innerHTML = ``;
+        document.getElementById("resultsSpinner").removeChild(spinner2);
         return;
       });
     });
 }
-
-
-
-
-
-
-
-
