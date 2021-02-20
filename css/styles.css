@@ -1,7 +1,6 @@
-body * {
+.p-absolute {
     position: absolute;
 }
-
 
 body {
     font-family: 'Open Sans', sans-serif;
@@ -19,14 +18,12 @@ body {
     margin-top: 5rem;
     margin-left: 5rem;
     margin-bottom: 5rem;
-    /* width: 90rem; */
     max-width: 90rem;
     min-height: 64rem;
     overflow: auto;
 }
 
 .display-5 {
-
     width: 42rem;
     height: 5rem;
     left: 10.25rem;
@@ -35,7 +32,6 @@ body {
 }
 
 .display-2 {
-
     width: 12rem;
     height: 4.5rem;
     left: 10.25rem;
@@ -45,7 +41,6 @@ body {
 }
 
 .text {
-
     width: 11.8rem;
     height: 1.5rem;
     left: 10.6rem;
@@ -53,44 +48,37 @@ body {
 }
 
 .form-control {
-  
     width: 5.4rem;
     height: 2.375rem;
-    left: 21.75rem;
+    left: 22.75rem;
     top: 14.3rem;
 }
 
 #fButton {
-  
     width: 2.44rem;
     height: 2.375rem;
     left: 29rem;
     top: 14.3rem;
 }
 
-#outputNumber {
-  
-    width: 1.75rem;
-    height: 1.5rem;
-    left: 31.8rem;
+#result {
+    left: 32.2rem;
     top: 14.75rem;
+}
+
+#outputNumber {
     font-weight: bold;
     text-decoration-line: underline;
 }
 
 #serverError {
-
     width: 400px;
     height: 1.5rem;
-    left: 31.8rem;
-    top: 14.75rem;
     font-size: 1rem;
     color: #D9534F;
 }
 
 #checkbox {
-    position: absolute;
-
     width: 8.875rem;
     height: 1.5rem;
 }
@@ -106,7 +94,6 @@ body {
 }
 
 .form-check-input {
-  
     width: 0.875rem;
     height: 0.875rem;
     background: #FFFFFF;
@@ -117,14 +104,19 @@ body {
 }
 
 .form-check-label {
-  
     width: 7.625rem;
     height: 1.5rem;
     font-size: 1rem;
+    display: flex;
+    align-items: flex-end;
+}
+
+.form-check {
+    left: 10.6rem;
+    top: 17.6rem;
 }
 
 .text-danger {
-
     width: 11.25rem;
     height: 2rem;
     left: 15.9rem;
@@ -138,19 +130,14 @@ body {
     color: #A94442;
 }
 
-
 .spinner1 {
-
-    left: 31.5rem;
-    top: 14.3rem;
+    top: -0.5rem;
 }
 
 .spinner2 {
-
     left: 355px;
     top: 375px;
 }
-
 
 .spinner-border {
     width: 2.5rem;
@@ -158,10 +145,9 @@ body {
 }
 
 .dropdown {
-
     width: 7.625rem;
     height: 2.375rem;
-    left: 10.25rem;
+    left: 9.65rem;
     top: 27.313rem;
 }
 
@@ -189,7 +175,6 @@ body {
 }
 
 .results {
-
     width: 68rem;
     height: 1.5rem;
     left: 10.25rem;
@@ -197,9 +182,8 @@ body {
 }
 
 ul#results {
-
     width: 1088px;
-    left: 10.25rem;
+    left: 10.6rem;
     top: 479px;
     padding-left: 0rem;
     list-style-type: none;
@@ -211,7 +195,6 @@ ul#results li {
     font-size: 21px;
     line-height: 24px;
     color: black;
-    /* color: #373A3C; */
     padding-top: 18px;
     padding-bottom: 18px;
     border-bottom: 1px solid black;
@@ -222,42 +205,4 @@ li strong {
     padding: 0em;
     background: none;
     font-weight: 700;
-}
-
-.form-check {
-
-    left: 169px;
-top: 281px;
-}
-
-
-.form-check-input {
-
-width: 14px;
-height: 14px;
-
-
-background: #FFFFFF;
-border: 1px solid #CCCCCC;
-box-sizing: border-box;
-box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.1);
-border-radius: 2px;
-}
-
-.form-check-label {
-
-width: 222px;
-height: 24px;
-
-
-font-style: normal;
-font-weight: normal;
-font-size: 16px;
-line-height: 24px;
-/* identical to box height, or 150% */
-
-display: flex;
-align-items: flex-end;
-
-color: #373A3C;
 }

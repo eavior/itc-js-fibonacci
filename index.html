@@ -14,35 +14,35 @@
 
 <body>
     <div class="container">
-        <h1 class="display-5">Fibonacci Calculator</h1>
-        <div class="text">The Fibonacci of</div>
+        <h1 class="display-5 p-absolute">Fibonacci Calculator</h1>
+        <div class="text p-absolute">The Fibonacci of</div>
         <form id="inputForm">
-            <input id="inputNumber" type="number" class="form-control"></input>
+            <input id="inputNumber" type="number" class="form-control p-absolute"></input>
         </form>
-        <button id="fButton" class="btn btn-primary">Is</button>
-        <div id="result"></div>
-        <div class="col-sm-3" id="alert"></div>
-        <div id="checkbox" class="form-check">
+        <button id="fButton" class="btn btn-primary p-absolute">Is</button>
+        <div id="result" class="p-absolute"></div>
+        <div class="col-sm-3 p-absolute" id="alert"></div>
+        <div id="checkbox" class="form-check p-absolute">
             <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
             <label class="form-check-label" for="flexCheckDefault">
                 Save Calculation
             </label>
         </div>
-        <h2 class="display-2">Results</h2>
-        <div id="resultsSpinner"></div>
-        <!-- <div class="dropdown">
+        <h2 class="display-2 p-absolute">Results</h2>
+        <div id="resultsSpinner" class="p-absolute"></div>
+        <div class="dropdown">
             <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Sort By
             </button>
             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                <a class="dropdown-item" href="#">Number Asc</a>
-                <a class="dropdown-item" href="#">Number Desc</a>
-                <a class="dropdown-item" href="#">Date Asc</a>
-                <a class="dropdown-item" href="#">Date Desc</a>
+                <a class="dropdown-item" type="button">Number Asc</a>
+                <a class="dropdown-item" type="button">Number Desc</a>
+                <a class="dropdown-item" type="button">Date Asc</a>
+                <a class="dropdown-item" type="button">Date Desc</a>
             </div>
-        </div> -->
-        <ul id="results"></ul>
+        </div>
+        <ul id="results" class="p-absolute"></ul>
     </div>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
